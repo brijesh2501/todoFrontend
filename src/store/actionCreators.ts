@@ -11,6 +11,15 @@ export function addTodo(todo:any) {
 
 export function getTodos(todo: any) {
   const action = {
+    type: actionTypes.GET_TODOS,
+    todo,
+  }
+
+  return simulateHttpRequest(action)
+}
+
+export function getTodo(todo: any) {
+  const action = {
     type: actionTypes.GET_TODO,
     todo,
   }

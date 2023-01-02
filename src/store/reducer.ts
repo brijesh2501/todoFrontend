@@ -20,6 +20,13 @@ const reducer = (
           ...state,
           todos: state.todos.concat(newTodo),
         }
+        case actionTypes.GET_TODOS:
+        
+          return {
+            ...state,
+            todos: action.todo,
+          } 
+          
         case actionTypes.GET_TODO:
         
           return {

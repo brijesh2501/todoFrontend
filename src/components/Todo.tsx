@@ -2,7 +2,10 @@ import * as React from "react"
 import { Dispatch } from "redux"
 import { useDispatch } from "react-redux"
 import axios from 'axios'
-import env from "react-dotenv";
+import env from "react-dotenv"
+import {
+ Link
+} from "react-router-dom";
 
 type Props = {
   todo: ITodo
@@ -22,9 +25,9 @@ export const Todo: React.FC<Props> = ({ todo, removeTodo }) => {
   }
 
   return (
-    <div className="Todo">
+    <div className="Todo" key={todo.id}>
       <div>
-        <h1>{todo.title}</h1>
+        <h1><Link to={`/details/${todo.id}`}>{todo.title}</Link></h1>
         <p>{todo.description}</p>
       </div>
       <button onClick={() => deleteTodo(todo)}>Delete</button>
