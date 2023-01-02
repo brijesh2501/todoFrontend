@@ -8,6 +8,7 @@ interface ITodo {
   
   type TodoState = {
     todos: ITodo[]
+    todo?: ITodo
   }
   
   type TodoAction = {

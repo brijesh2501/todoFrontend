@@ -31,7 +31,7 @@ const reducer = (
         
           return {
             ...state,
-            todos: action.todo,
+            todo: action.todo,
           }  
       case actionTypes.REMOVE_TODO:
         const updatedTodos: ITodo[] = state.todos.filter(

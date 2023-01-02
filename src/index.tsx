@@ -10,7 +10,8 @@ const store: Store<TodoState, TodoAction> & {
   dispatch: DispatchType
 } = createStore(reducer, applyMiddleware(thunk))
 
-const rootElement = document.getElementById("root")
+const rootElement = document.getElementById("root");
+
 render(
   <Provider store={store}>
     <App />
