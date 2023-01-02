@@ -19,7 +19,7 @@ const Detail: React.FC = () => {
       .then(res => {
         if(res.data){
           console.log(res.data);
-          dispatch(getTodo(res.data))
+          // dispatch(getTodo(res.data))
         }
     });
     return () => (mounted = false);
